@@ -1,0 +1,71 @@
+{
+  "name": "ssr-boilerplate",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "razzle start",
+    "build": "razzle build",
+    "test": "razzle test --env=jsdom",
+    "start:prod": "NODE_ENV=production node build/server.js"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "axios": "^0.19.0",
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
+    "css-modules-typescript-loader": "^4.0.0",
+    "express": "^4.17.1",
+    "i18next": "^17.0.3",
+    "i18next-browser-languagedetector": "^3.0.1",
+    "i18next-express-middleware": "^1.8.0",
+    "i18next-node-fs-backend": "^2.1.3",
+    "i18next-xhr-backend": "^3.0.0",
+    "loadable-components": "^2.2.3",
+    "mobx": "^5.10.1",
+    "mobx-cookie": "^2.0.3",
+    "mobx-persist": "^0.4.1",
+    "mobx-react": "^6.0.3",
+    "netjet": "^1.3.0",
+    "postcss-at-rules-variables": "^0.1.10",
+    "postcss-each": "^0.10.0",
+    "postcss-nested": "^4.2.1",
+    "razzle": "^3.0.0",
+    "razzle-plugin-long-term-caching": "^1.0.0-alpha.30",
+    "razzle-plugin-pwa": "^2.2.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-flexview": "^4.0.3",
+    "react-helmet": "^5.2.1",
+    "react-i18next": "^10.11.0",
+    "react-router-dom": "^5.0.1",
+    "react-toastify": "^5.2.1",
+    "serialize-javascript": "^2.1.2",
+    "sha.js": "^2.4.11",
+    "spdy": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "jest": "^24.8.0",
+    "postcss-scss": "^2.0.0",
+    "razzle": "^3.0.0",
+    "razzle-plugin-scss": "^3.0.0"
+  },
+  "jest": {
+    "transform": {
+      "\\.css$": "<rootDir>/node_modules/razzle/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/node_modules/razzle/config/jest/fileTransform.js"
+    },
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.(ts|js)?(x)",
+      "<rootDir>/src/**/?(*.)(spec|test).(ts|js)?(x)"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}"
+    ]
+  }
+}

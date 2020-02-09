@@ -1,0 +1,30 @@
+{
+  "presets": ["razzle/babel"],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    "loadable-components/babel",
+    [
+      "react-css-modules",
+      {
+        "filetypes": {
+          ".scss": {
+            "syntax": "postcss-scss",
+            "plugins": [
+              "postcss-at-rules-variables",
+              "postcss-each",
+              [
+                "postcss-nested",
+                {
+                  "bubble": ["@include"],
+                  "preserveEmpty": true
+                }
+              ]
+            ]
+          }
+        },
+        "webpackHotModuleReloading": true,
+        "generateScopedName": "[path]__[name]___[local]"
+      }
+    ]
+  ]
+}

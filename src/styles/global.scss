@@ -1,0 +1,14 @@
+@import './normalize.css';
+@import './variables.scss';
+
+@import './themes/dark.scss';
+@import './themes/light.scss';
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%;
+}
